@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49909/Service.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49909/Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49909/Service.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService_IsAdmin_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsAdmin" />
+  </wsdl:message>
+  <wsdl:message name="IService_IsAdmin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_MainMethodCurr_InputMessage">
+    <wsdl:part name="parameters" element="tns:MainMethodCurr" />
+  </wsdl:message>
+  <wsdl:message name="IService_MainMethodCurr_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MainMethodCurrResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_MainMethodFore_InputMessage">
+    <wsdl:part name="parameters" element="tns:MainMethodFore" />
+  </wsdl:message>
+  <wsdl:message name="IService_MainMethodFore_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MainMethodForeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_UnixSecondsToDateTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnixSecondsToDateTime" />
+  </wsdl:message>
+  <wsdl:message name="IService_UnixSecondsToDateTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnixSecondsToDateTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_Registration_InputMessage">
+    <wsdl:part name="parameters" element="tns:Registration" />
+  </wsdl:message>
+  <wsdl:message name="IService_Registration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_convertUnitsTemp_InputMessage">
+    <wsdl:part name="parameters" element="tns:convertUnitsTemp" />
+  </wsdl:message>
+  <wsdl:message name="IService_convertUnitsTemp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:convertUnitsTempResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SendMail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMail" />
+  </wsdl:message>
+  <wsdl:message name="IService_SendMail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_ValidateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateUser" />
+  </wsdl:message>
+  <wsdl:message name="IService_ValidateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SaveUserLogToDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUserLogToDB" />
+  </wsdl:message>
+  <wsdl:message name="IService_SaveUserLogToDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUserLogToDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_getnewresult_InputMessage">
+    <wsdl:part name="parameters" element="tns:getnewresult" />
+  </wsdl:message>
+  <wsdl:message name="IService_getnewresult_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getnewresultResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService">
+    <wsdl:operation name="IsAdmin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/IsAdmin" message="tns:IService_IsAdmin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/IsAdminResponse" message="tns:IService_IsAdmin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MainMethodCurr">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/MainMethodCurr" message="tns:IService_MainMethodCurr_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/MainMethodCurrResponse" message="tns:IService_MainMethodCurr_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MainMethodFore">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/MainMethodFore" message="tns:IService_MainMethodFore_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/MainMethodForeResponse" message="tns:IService_MainMethodFore_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnixSecondsToDateTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/UnixSecondsToDateTime" message="tns:IService_UnixSecondsToDateTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/UnixSecondsToDateTimeResponse" message="tns:IService_UnixSecondsToDateTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/Login" message="tns:IService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/LoginResponse" message="tns:IService_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Registration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/Registration" message="tns:IService_Registration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/RegistrationResponse" message="tns:IService_Registration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="convertUnitsTemp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/convertUnitsTemp" message="tns:IService_convertUnitsTemp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/convertUnitsTempResponse" message="tns:IService_convertUnitsTemp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SendMail" message="tns:IService_SendMail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SendMailResponse" message="tns:IService_SendMail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ValidateUser" message="tns:IService_ValidateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ValidateUserResponse" message="tns:IService_ValidateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUserLogToDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SaveUserLogToDB" message="tns:IService_SaveUserLogToDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SaveUserLogToDBResponse" message="tns:IService_SaveUserLogToDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getnewresult">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/getnewresult" message="tns:IService_getnewresult_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/getnewresultResponse" message="tns:IService_getnewresult_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IsAdmin">
+      <soap:operation soapAction="http://tempuri.org/IService/IsAdmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MainMethodCurr">
+      <soap:operation soapAction="http://tempuri.org/IService/MainMethodCurr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MainMethodFore">
+      <soap:operation soapAction="http://tempuri.org/IService/MainMethodFore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnixSecondsToDateTime">
+      <soap:operation soapAction="http://tempuri.org/IService/UnixSecondsToDateTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IService/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Registration">
+      <soap:operation soapAction="http://tempuri.org/IService/Registration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="convertUnitsTemp">
+      <soap:operation soapAction="http://tempuri.org/IService/convertUnitsTemp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMail">
+      <soap:operation soapAction="http://tempuri.org/IService/SendMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUser">
+      <soap:operation soapAction="http://tempuri.org/IService/ValidateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUserLogToDB">
+      <soap:operation soapAction="http://tempuri.org/IService/SaveUserLogToDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getnewresult">
+      <soap:operation soapAction="http://tempuri.org/IService/getnewresult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="BasicHttpBinding_IService" binding="tns:BasicHttpBinding_IService">
+      <soap:address location="http://localhost:49909/Service.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
