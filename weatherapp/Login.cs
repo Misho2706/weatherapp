@@ -69,7 +69,7 @@ namespace weatherapp
 
                     if(Program.loggedUser != null)
                     {
-                        Form1 weatherForm = new Form1();
+                        Main weatherForm = new Main();
                         weatherForm.Show();
                         this.Hide();
                     }
